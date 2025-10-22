@@ -20,8 +20,8 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
         Room::factory(10)->create();
-        Guest::factory(10)->create();
-        Booking::factory(30)->create();
+        // Guest::factory(10)->create();
+        // Booking::factory(30)->create();
 
 
         User::factory()->create([

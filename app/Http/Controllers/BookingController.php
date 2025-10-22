@@ -34,7 +34,7 @@ class BookingController extends Controller
 
     public function store(Request $request)
     {
-        // ✅ Validation
+        // Validation
         $request->validate([
             'guest_name' => 'required|string|max:255',
             'guest_email' => 'required|email|max:255',
@@ -44,7 +44,7 @@ class BookingController extends Controller
             'check_out' => 'required|date|after:check_in',
         ]);
 
-        // ✅ Create or find guest
+        // Create or find guest
         $guest = Guest::firstOrCreate(
             ['email' => $request->guest_email],
             [
@@ -53,7 +53,7 @@ class BookingController extends Controller
             ]
         );
 
-        // ✅ Create booking
+        // Create booking
         Booking::create([
             'guest_id' => $guest->id,
             'room_id' => $request->room_id,
@@ -61,7 +61,7 @@ class BookingController extends Controller
             'check_out' => $request->check_out,
         ]);
 
-        // ✅ Redirect with success message
+        // Redirect with success message
         return redirect()->route('bookings.create')->with('success', 'Booking successfully created!');
     }
 }

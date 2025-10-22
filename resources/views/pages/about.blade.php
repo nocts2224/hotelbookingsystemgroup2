@@ -2,7 +2,6 @@
 
 @section('content')
 <style>
-  /* === HERO SECTION STYLES === */
   .about-hero {
     /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
       url('{{ asset('images/hotel-lobby.jpg') }}') center/cover no-repeat; */
@@ -34,7 +33,6 @@
     color: #0d6efd;
   }
 
-  /* === TEAM SECTION STYLES === */
   .team-section {
     padding: 60px 0;
     background-color: #fff;

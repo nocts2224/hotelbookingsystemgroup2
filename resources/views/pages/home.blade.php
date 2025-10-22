@@ -2,7 +2,6 @@
 
 @section('content')
 <style>
-  /* === HERO SECTION === */
   .hero-section {
     /* background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
       url('{{ asset('images/hotel.jpg') }}') center/cover no-repeat; */
