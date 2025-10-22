@@ -73,6 +73,66 @@
     color: #0d6efd;
     margin-bottom: 15px;
   }
+
+  .room-card {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .room-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Optional: smoother carousel transitions */
+    .carousel-item {
+      transition: transform 1s ease-in-out;
+    }
+
+    .carousel-wrapper {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 1.5rem;
+      animation: scroll 20s linear infinite;
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .room-card {
+      flex: 0 0 30%;
+      min-width: 300px;
+      border-radius: 15px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .room-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 992px) {
+      .room-card {
+        flex: 0 0 45%;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .room-card {
+        flex: 0 0 80%;
+      }
+    }
 </style>
 
 <!-- HERO SECTION -->
@@ -111,30 +171,55 @@
 </section>
 
 <!-- ROOMS SECTION -->
-<section class="rooms d-flex align-items-center">
+<section class="rooms d-flex align-items-center py-5">
   <div class="container text-center">
     <h2 class="fw-bold mb-5">Featured Rooms</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card border-0 shadow-sm h-100">
+
+    <div class="carousel-wrapper">
+      <div class="carousel-track">
+        <!-- Repeating cards rawr -->
+        <div class="card border-0 shadow-sm room-card">
           <img src="{{ asset('images/room1.jpg') }}" class="card-img-top" alt="Deluxe Room">
           <div class="card-body">
             <h5 class="card-title">Deluxe Room</h5>
             <p class="card-text text-muted">Cozy and elegant with a city view, perfect for couples.</p>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card border-0 shadow-sm h-100">
+
+        <div class="card border-0 shadow-sm room-card">
           <img src="{{ asset('images/room2.jpg') }}" class="card-img-top" alt="Suite">
           <div class="card-body">
             <h5 class="card-title">Executive Suite</h5>
             <p class="card-text text-muted">Spacious suite with living area and complimentary minibar.</p>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card border-0 shadow-sm h-100">
+
+        <div class="card border-0 shadow-sm room-card">
+          <img src="{{ asset('images/room3.jpg') }}" class="card-img-top" alt="Family Room">
+          <div class="card-body">
+            <h5 class="card-title">Family Room</h5>
+            <p class="card-text text-muted">Comfort and space for the whole family — everyone’s welcome!</p>
+          </div>
+        </div>
+
+        <!-- duplicate for infinite loop illusion -->
+        <div class="card border-0 shadow-sm room-card">
+          <img src="{{ asset('images/room1.jpg') }}" class="card-img-top" alt="Deluxe Room">
+          <div class="card-body">
+            <h5 class="card-title">Deluxe Room</h5>
+            <p class="card-text text-muted">Cozy and elegant with a city view, perfect for couples.</p>
+          </div>
+        </div>
+
+        <div class="card border-0 shadow-sm room-card">
+          <img src="{{ asset('images/room2.jpg') }}" class="card-img-top" alt="Suite">
+          <div class="card-body">
+            <h5 class="card-title">Executive Suite</h5>
+            <p class="card-text text-muted">Spacious suite with living area and complimentary minibar.</p>
+          </div>
+        </div>
+
+        <div class="card border-0 shadow-sm room-card">
           <img src="{{ asset('images/room3.jpg') }}" class="card-img-top" alt="Family Room">
           <div class="card-body">
             <h5 class="card-title">Family Room</h5>
@@ -144,7 +229,5 @@
       </div>
     </div>
   </div>
-</section>
-
 </section>
 @endsection

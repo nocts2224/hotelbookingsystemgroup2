@@ -39,18 +39,27 @@
 <div class="bookings-container">
   <div class="container">
     <div class="bookings-card">
+      <!-- Header + Search Bar -->
       <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
-        <h2><i class="bi bi-calendar-check me-2 text-primary"></i> All Bookings</h2>
+        <h2 class="mb-0">
+          <i class="bi bi-calendar-check me-2 text-primary"></i> All Bookings
+        </h2>
 
-        <!-- Optional Search Bar -->
-        <form class="d-flex search-bar" role="search">
-          <input class="form-control me-2 rounded-pill" type="search" placeholder="Search guest or room..." aria-label="Search">
+        <form class="d-flex search-bar" role="search" method="GET" action="{{ route('bookings.index') }}">
+          <input
+            class="form-control me-2 rounded-pill"
+            type="search"
+            name="search"
+            placeholder="Search guest name..."
+            value="{{ request('search') }}"
+          >
           <button class="btn btn-primary rounded-pill" type="submit">
             <i class="bi bi-search"></i>
           </button>
         </form>
       </div>
 
+      <!-- Table -->
       <div class="table-responsive">
         <table class="table align-middle table-striped table-hover">
           <thead>
