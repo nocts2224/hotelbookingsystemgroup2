@@ -1,30 +1,12 @@
 @extends('layouts.app')
 
+
+@section('styles')
+<link rel="stylesheet" href="{{ asset('assets/pagesCSS/bookingCreate.css') }}">
+@endsection
+
+
 @section('content')
-<style>
-  /* Fix section being hidden behind fixed navbar */
-.booking-form-section {
-  padding-top: 80px; /* equal to navbar height */
-  min-height: calc(100vh - 80px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(rgba(13, 110, 253, 0.05), rgba(13, 110, 253, 0.1));
-}
-
-/* Adjust for smaller screens */
-@media (max-width: 992px) {
-  .booking-form-section {
-    padding-top: 70px;
-  }
-}
-
-  .booking-card {
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
-  }
-</style>
 
 <div class="booking-form-section">
   <div class="container">

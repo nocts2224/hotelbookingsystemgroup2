@@ -1,0 +1,130 @@
+.hero-section {
+    /* background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+      url('{{ asset('images/hotel.jpg') }}') center/cover no-repeat; */
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    scroll-snap-align: start;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+
+  .hero-content p {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    opacity: 0.9;
+  }
+
+  .btn-book {
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-book:hover {
+    background-color: #0d6efd;
+    transform: translateY(-3px);
+  }
+
+  /* === SECTIONS === */
+  section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    padding: 100px 0;
+  }
+
+  .features {
+    background: #f8f9fa;
+  }
+
+  .rooms {
+    background: #fff;
+  }
+
+  .contact {
+    background: #f8f9fa;
+  }
+
+  /* === SCROLL SNAP === */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+    color: #0d6efd;
+    margin-bottom: 15px;
+  }
+
+  .room-card {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .room-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Optional: smoother carousel transitions */
+    .carousel-item {
+      transition: transform 1s ease-in-out;
+    }
+
+    .carousel-wrapper {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 1.5rem;
+      animation: scroll 20s linear infinite;
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .room-card {
+      flex: 0 0 30%;
+      min-width: 300px;
+      border-radius: 15px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .room-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 992px) {
+      .room-card {
+        flex: 0 0 45%;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .room-card {
+        flex: 0 0 80%;
+      }
+    }
