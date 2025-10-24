@@ -78,7 +78,7 @@
             </div>
 
             <div class="d-grid">
-              <button type="submit" class="btn btn-primary btn-lg">
+              <button type="submit" class="btn btn-pink btn-lg">
                 <i class="bi bi-calendar-check me-2"></i> Book Now
               </button>
             </div>

@@ -1,130 +1,178 @@
+/* ====== GLOBAL STYLES ====== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff7fb;
+  color: #4b2e39;
+  overflow-x: hidden;
+}
+
+:root {
+  --main-pink: #f8c5d6;
+  --soft-pink: #ffe6ef;
+  --accent: #e87da4;
+  --cream: #fff9f9;
+  --lavender: #e6d9ff;
+}
+
+/* ====== HERO SECTION ====== */
 .hero-section {
-    /* background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-      url('{{ asset('images/hotel.jpg') }}') center/cover no-repeat; */
-    height: 100vh;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    scroll-snap-align: start;
-  }
+  position: relative;
+  height: 100vh;
+  background: url('../../images/hotel-entrance.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
-  .hero-content h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-  }
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(248, 197, 214, 0.6), rgba(230, 217, 255, 0.6));
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
 
-  .hero-content p {
-    font-size: 1.25rem;
-    margin-top: 1rem;
-    opacity: 0.9;
-  }
+.hero-section::after {
+  content: "✨";
+  font-size: 5rem;
+  color: var(--accent);
+  position: absolute;
+  animation: floatSparkles 6s infinite ease-in-out;
+  z-index: 0;
+}
 
-  .btn-book {
-    margin-top: 2rem;
-    padding: 0.75rem 2rem;
-    font-size: 1.1rem;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-  }
+@keyframes floatSparkles {
+  0%, 100% { top: 10%; left: 10%; opacity: 0.6; transform: rotate(0deg); }
+  50% { top: 30%; left: 80%; opacity: 1; transform: rotate(360deg); }
+}
 
-  .btn-book:hover {
-    background-color: #0d6efd;
-    transform: translateY(-3px);
-  }
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  animation: fadeInUp 1.5s ease;
+}
 
-  /* === SECTIONS === */
-  section {
-    scroll-snap-align: start;
-    min-height: 100vh;
-    padding: 100px 0;
-  }
+.hero-content h1 {
+  font-weight: 700;
+  font-size: 3.5rem;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
 
-  .features {
-    background: #f8f9fa;
-  }
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
 
-  .rooms {
-    background: #fff;
-  }
+/* Book Now Button */
+.btn-book {
+  background-color: var(--accent);
+  color: white !important;
+  border: none;
+  border-radius: 30px;
+  padding: 0.75rem 2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  animation: bounceIn 2.5s ease;
+}
 
-  .contact {
-    background: #f8f9fa;
-  }
+.btn-book:hover {
+  background-color: #ffb6c1;
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.6);
+}
 
-  /* === SCROLL SNAP === */
-  html {
-    scroll-behavior: smooth;
-  }
+/* ====== FEATURES SECTION ====== */
+.features {
+  background: var(--cream);
+  padding: 5rem 0;
+}
 
-  body {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-  }
+.feature-icon {
+  font-size: 3rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
 
-  .feature-icon {
-    font-size: 2.5rem;
-    color: #0d6efd;
-    margin-bottom: 15px;
-  }
+.feature-icon:hover {
+  color: #ff8fb1;
+  transform: scale(1.2) rotate(5deg);
+}
 
-  .room-card {
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
+.features h2 {
+  color: var(--accent);
+  animation: fadeInUp 1.2s ease;
+}
 
-    .room-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    }
+.features .col-md-4 {
+  animation: floatUp 1.5s ease forwards;
+  opacity: 0;
+}
 
-    /* Optional: smoother carousel transitions */
-    .carousel-item {
-      transition: transform 1s ease-in-out;
-    }
+.features .col-md-4:nth-child(1) { animation-delay: 0.2s; }
+.features .col-md-4:nth-child(2) { animation-delay: 0.4s; }
+.features .col-md-4:nth-child(3) { animation-delay: 0.6s; }
 
-    .carousel-wrapper {
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-    }
+@keyframes floatUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
 
-    .carousel-track {
-      display: flex;
-      gap: 1.5rem;
-      animation: scroll 20s linear infinite;
-    }
+/* ====== ROOMS SECTION ====== */
+.rooms {
+  background: linear-gradient(135deg, var(--lavender), var(--soft-pink));
+  padding-bottom: 6rem;
+}
 
-    @keyframes scroll {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-50%);
-      }
-    }
+.rooms h2 {
+  color: var(--accent);
+  animation: fadeInUp 1s ease;
+}
 
-    .room-card {
-      flex: 0 0 30%;
-      min-width: 300px;
-      border-radius: 15px;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
+/* Carousel */
+.carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
 
-    .room-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    }
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  animation: slideLoop 25s linear infinite;
+}
 
-    /* Responsive tweaks */
-    @media (max-width: 992px) {
-      .room-card {
-        flex: 0 0 45%;
-      }
-    }
+@keyframes slideLoop {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
-    @media (max-width: 576px) {
-      .room-card {
-        flex: 0 0 80%;
-      }
-    }
+/* Room Cards */
+.room-card {
+  min-width: 300px;
+  border-radius: 15px;
+  background-color: white;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeIn 1s ease;
+}
+
+.room-card img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.room-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(255, 182, 193, 0.4);
+}
+
+/* ====== ANIMATIONS ====== */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes bounceIn { 0% { transform: scale(0.8); opacity: 0; } 60% { transform: scale(1.05); opacity: 1; } 100% { transform: scale(1); } }

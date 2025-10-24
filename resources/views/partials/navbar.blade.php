@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 shadow-sm fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-pink bg-opacity-75 shadow-sm fixed-top">
   <div class="container-fluid py-2 px-3">
     <!-- Left: Brand -->
-    <a class="navbar-brand fw-bold fs-4 text-uppercase me-0" href="{{ route('pages.home') }}">
+    <a class="navbar-brand fw-bold fs-4 text-uppercase me-0 text-pink-brand" href="{{ route('pages.home') }}">
       <i class="bi bi-building"></i> Hotel System
     </a>
 
@@ -28,7 +28,7 @@
       </ul>
 
       <!-- Right: Book Now button -->
-      <a href="{{ route('bookings.create') }}" class="btn btn-light text-dark fw-semibold px-4 py-2 rounded-pill book-now-btn">
+      <a href="{{ route('bookings.create') }}" class="btn btn-pink fw-semibold px-4 py-2 rounded-pill book-now-btn">
         Book Now
       </a>
     </div>
@@ -37,26 +37,41 @@
 
 <!-- Styles -->
 <style>
+  /* Navbar Background */
   .navbar {
     backdrop-filter: blur(10px);
+    background: rgba(232, 125, 164, 0.85) !important; /* soft pink */
   }
 
+  /* Brand */
+  .text-pink-brand {
+    color: #fff !important;
+  }
+
+  .text-pink-brand:hover {
+    color: #ffe6ef !important;
+  }
+
+  /* Links hover */
   .hover-nav {
     transition: all 0.3s ease;
   }
 
   .hover-nav:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 182, 193, 0.25); /* light pink hover */
+    color: #fff !important;
   }
 
   /* Book Now Button */
-  .book-now-btn {
+  .btn-pink {
+    background-color: #e87da4;
+    color: #fff;
     font-size: 1.1rem;
     transition: all 0.3s ease;
   }
 
-  .book-now-btn:hover {
-    background-color: #0d6efd;
+  .btn-pink:hover {
+    background-color: #ffb6c1;
     color: #fff !important;
     transform: translateY(-2px);
   }

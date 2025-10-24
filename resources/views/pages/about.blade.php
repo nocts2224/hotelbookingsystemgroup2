@@ -60,7 +60,7 @@
       <div class="team-carousel-track">
         <!-- TEAM CARD 1 -->
         <div class="card team-card">
-          <img src="{{ asset('images/team1.jpg') }}" class="card-img-top" alt="Team Member">
+          <img src="{{ asset('images/Dodax.jpg') }}" class="card-img-top" alt="Team Member">
           <div class="card-body">
             <h5 class="card-title mb-1">Dodax</h5>
             <p class="text-muted small">Team Leader x Chief Developer</p>
@@ -69,7 +69,7 @@
 
         <!-- TEAM CARD 2 -->
         <div class="card team-card">
-          <img src="{{ asset('images/team2.jpg') }}" class="card-img-top" alt="Team Member">
+          <img src="{{ asset('images/Lj.jpg') }}" class="card-img-top" alt="Team Member">
           <div class="card-body">
             <h5 class="card-title mb-1">LJ</h5>
             <p class="text-muted small">The Vibe Coder</p>
@@ -78,7 +78,7 @@
 
         <!-- TEAM CARD 3 -->
         <div class="card team-card">
-          <img src="{{ asset('images/team3.jpg') }}" class="card-img-top" alt="Team Member">
+          <img src="{{ asset('images/Krishiel.jpg') }}" class="card-img-top" alt="Team Member">
           <div class="card-body">
             <h5 class="card-title mb-1">Krishiel</h5>
             <p class="text-muted small">Team Support x UI/UX Designer</p>
@@ -87,7 +87,7 @@
 
         <!-- TEAM CARD 4 -->
         <div class="card team-card">
-          <img src="{{ asset('images/team3.jpg') }}" class="card-img-top" alt="Team Member">
+          <img src="{{ asset('images/yang.jpg') }}" class="card-img-top" alt="Team Member">
           <div class="card-body">
             <h5 class="card-title mb-1">Mayang</h5>
             <p class="text-muted small">Developer x Dancer</p>
@@ -96,7 +96,7 @@
 
         <!-- duplicate set for infinite loop -->
         <div class="card team-card">
-          <img src="{{ asset('images/team1.jpg') }}" class="card-img-top" alt="Team Member">
+          <img src="{{ asset('images/Dodax.jpg') }}" class="card-img-top" alt="Team Member">
           <div class="card-body">
             <h5 class="card-title mb-1">Dodax</h5>
             <p class="text-muted small">Team Leader x Chief Developer</p>
@@ -104,7 +104,7 @@
         </div>
 
         <div class="card team-card">
-          <img src="{{ asset('images/team2.jpg') }}" class="card-img-top" alt="Team Member">
+          <img src="{{ asset('images/Lj.jpg') }}" class="card-img-top" alt="Team Member">
           <div class="card-body">
             <h5 class="card-title mb-1">LJ</h5>
             <p class="text-muted small">The Vibe Coder</p>
@@ -112,7 +112,7 @@
         </div>
 
         <div class="card team-card">
-          <img src="{{ asset('images/team3.jpg') }}" class="card-img-top" alt="Team Member">
+          <img src="{{ asset('images/Krishiel.jpg') }}" class="card-img-top" alt="Team Member">
           <div class="card-body">
             <h5 class="card-title mb-1">Krishiel</h5>
             <p class="text-muted small">Team Support x UI/UX Designer</p>
@@ -120,7 +120,7 @@
         </div>
 
         <div class="card team-card">
-          <img src="{{ asset('images/team3.jpg') }}" class="card-img-top" alt="Team Member">
+          <img src="{{ asset('images/yang.jpg') }}" class="card-img-top" alt="Team Member">
           <div class="card-body">
             <h5 class="card-title mb-1">Mayang</h5>
             <p class="text-muted small">Developer x Dancer</p>

@@ -1,22 +1,133 @@
-  /* Fix section being hidden behind fixed navbar */
+/* ====== GLOBAL STYLES ====== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff7fb;
+  color: #4b2e39;
+  overflow-x: hidden;
+}
+
+:root {
+  --main-pink: #f8c5d6;
+  --soft-pink: #ffe6ef;
+  --accent: #e87da4;
+  --lavender: #e6d9ff;
+  --cream: #fff9f9;
+}
+
+/* ====== FIX NAVBAR OVERLAP & MAIN SECTION ====== */
 .booking-form-section {
-  padding-top: 80px; /* equal to navbar height */
+  padding-top: 80px; /* Equal to navbar height */
   min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(13, 110, 253, 0.05), rgba(13, 110, 253, 0.1));
+  background: linear-gradient(135deg, var(--soft-pink), var(--lavender));
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1.2s ease;
 }
 
-/* Adjust for smaller screens */
+/* Sparkle background effect */
+.booking-form-section::after {
+  content: "✨";
+  font-size: 4rem;
+  color: var(--accent);
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  opacity: 0.4;
+  animation: floatSparkles 8s infinite ease-in-out;
+}
+
+@keyframes floatSparkles {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.5; }
+  50% { transform: translate(50px, 40px) rotate(360deg); opacity: 1; }
+}
+
+/* ====== RESPONSIVE NAV FIX ====== */
 @media (max-width: 992px) {
   .booking-form-section {
     padding-top: 70px;
   }
 }
 
-  .booking-card {
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
-  }
+/* ====== BOOKING CARD ====== */
+.booking-card {
+  background-color: var(--cream);
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(232, 125, 164, 0.25);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 550px;
+  animation: fadeInUp 1.2s ease;
+  position: relative;
+}
+
+.booking-card h2 {
+  text-align: center;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.booking-card h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 0.5rem auto 0;
+  animation: growLine 1s ease;
+}
+
+@keyframes growLine {
+  from { width: 0; opacity: 0; }
+  to { width: 80px; opacity: 1; }
+}
+
+/* ====== FORM FIELDS ====== */
+.form-control {
+  border-radius: 20px;
+  border: 2px solid var(--accent);
+  padding: 0.6rem 1rem;
+  box-shadow: 0 3px 10px rgba(232, 125, 164, 0.1);
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #ffb6c1;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.4);
+}
+
+/* ====== BUTTON ====== */
+.btn-book-now {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--accent);
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.btn-book-now:hover {
+  background-color: #ffb6c1;
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+}
+
+/* ====== ANIMATIONS ====== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
