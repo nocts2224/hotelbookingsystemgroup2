@@ -23,7 +23,7 @@
             placeholder="Search guest name..."
             value="{{ request('search') }}"
           >
-          <button class="btn btn-primary rounded-pill" type="submit">
+          <button class="btn btn-pink rounded-pill" type="submit">
             <i class="bi bi-search"></i>
           </button>
         </form>

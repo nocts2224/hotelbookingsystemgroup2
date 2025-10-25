@@ -6,7 +6,7 @@
 
 @section('content')
 
-<!-- 🌸 HERO SECTION -->
+<!-- HERO SECTION -->
 <div class="hero-section">
   <div class="overlay"></div>
   <div class="hero-content text-white text-center">
@@ -18,7 +18,7 @@
   </div>
 </div>
 
-<!-- 🌸 FEATURES SECTION -->
+<!-- FEATURES SECTION -->
 <section class="features d-flex align-items-center">
   <div class="container text-center">
     <h2 class="fw-bold mb-5">Why Choose Us?</h2>
@@ -42,7 +42,7 @@
   </div>
 </section>
 
-<!-- 🌸 ROOMS SECTION -->
+<!-- ROOMS SECTION -->
 <section class="rooms d-flex align-items-center py-5">
   <div class="container text-center">
     <h2 class="fw-bold mb-5">Featured Rooms</h2>
