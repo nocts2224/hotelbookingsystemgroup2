@@ -12,7 +12,7 @@
       <!-- Header + Search Bar -->
       <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
         <h2 class="mb-0">
-          <i class="bi bi-calendar-check me-2 text-primary"></i> All Bookings
+          <i class="bi bi-calendar-check me-2 text-primary" style="color: pink;"></i> All Bookings
         </h2>
 
         <form class="d-flex search-bar" role="search" method="GET" action="{{ route('bookings.index') }}">
