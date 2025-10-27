@@ -71,7 +71,7 @@
         <div class="card team-card">
           <img src="{{ asset('images/Lj.jpg') }}" class="card-img-top" alt="Team Member">
           <div class="card-body">
-            <h5 class="card-title mb-1">LJ</h5>
+            <h5 class="card-title mb-1">LJPT</h5>
             <p class="text-muted small">The Vibe Coder</p>
           </div>
         </div>
@@ -106,7 +106,7 @@
         <div class="card team-card">
           <img src="{{ asset('images/Lj.jpg') }}" class="card-img-top" alt="Team Member">
           <div class="card-body">
-            <h5 class="card-title mb-1">LJ</h5>
+            <h5 class="card-title mb-1">LJPT</h5>
             <p class="text-muted small">The Vibe Coder</p>
           </div>
         </div>

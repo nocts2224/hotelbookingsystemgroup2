@@ -12,7 +12,7 @@
   <div class="hero-content text-white text-center">
     <h1>Welcome to Our Hotel</h1>
     <p>Experience comfort and luxury — book your perfect stay today!</p>
-    <a href="{{ route('bookings.index') }}" class="btn btn-light btn-book shadow">
+    <a href="{{ route('bookings.create') }}" class="btn btn-light btn-book shadow">
       <i class="bi bi-calendar-check me-2"></i> Book Now
     </a>
   </div>
