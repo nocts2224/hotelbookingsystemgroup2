@@ -20,6 +20,12 @@
           <a class="nav-link px-3 rounded-pill hover-nav fs-5 text-white" href="{{ route('pages.home') }}">Home</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link px-3 rounded-pill hover-nav fs-5 text-white" href="{{ route('pages.rooms') }}">Room</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 rounded-pill hover-nav fs-5 text-white" href="{{ route('pages.guest') }}">Guest</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link px-3 rounded-pill hover-nav fs-5 text-white" href="{{ route('bookings.index') }}">Bookings</a>
         </li>
         <li class="nav-item">

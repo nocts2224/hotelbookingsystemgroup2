@@ -20,7 +20,7 @@ class RoomFactory extends Factory
         'room_number' => strtoupper(fake()->bothify('R###')),
         'type' => fake()->randomElement(['Single', 'Double', 'Suite']),
         'price_per_night' => fake()->randomFloat(2, 50, 300),
-        'availability' => true,
+        'availability' => fake()->boolean(70), // 70% chance it's available
     ];
 }
 
